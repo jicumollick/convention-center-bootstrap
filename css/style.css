@@ -4,11 +4,75 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-.overlay {
+
+/* pricing table css  */
+.card {
+  border: none;
+  padding: 10px 0px;
+}
+
+.card::after {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: #080d15;
-  opacity: 0.7;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  transform: scale(1.02, 1.02);
+  -webkit-transform: scale(1.02, 1.02);
+  backface-visibility: hidden;
+  will-change: transform;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.75) !important;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.myextra1 {
+  transform: scale(1.02, 1.02);
+  -webkit-transform: scale(1.02, 1.02);
+  backface-visibility: hidden;
+  will-change: transform;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.75) !important;
+  background-color: #007bff;
+  color: #fff;
+}
+.myextra1:hover {
+  transform: scale(1.02, 1.02);
+  -webkit-transform: scale(1.02, 1.02);
+  backface-visibility: hidden;
+  will-change: transform;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.75) !important;
+  color: #007bff;
+  background: #fff;
+}
+.myextra1 ul li {
+  background-color: #007bff;
+  color: #fff;
+}
+.myextra1 .btn-outline-primary {
+  background: white;
+  color: #007bff;
+}
+.myextra1:hover .btn-outline-primary {
+  color: white;
+  background: #007bff;
+}
+.card:hover ul li {
+  background-color: #007bff;
+  color: #fff;
+}
+.myextra1:hover ul li {
+  color: #007bff;
+  background: #fff;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover .btn-outline-primary {
+  background: white;
+  color: #007bff;
 }
